@@ -8,7 +8,7 @@ count = 0
 destination.mkdir(exist_ok=True)
 for item in source.iterdir():
     if item.is_file:
-        #takes two argumentsz: the source path and the dest path
+        #takes two arguments: the source path and the dest path
         shutil.move(item, destination/item.name)
         count +=1
 print(count)
