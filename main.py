@@ -4,8 +4,6 @@ def main():
             x = int(input("Enter a number greater than 0: "))
             if(x>0):
                 break
-            else:
-                print("Enter a number greater than 0")
         except ValueError:
             print("Please enter a number")
 
