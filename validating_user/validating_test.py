@@ -19,6 +19,9 @@ class TestValidate(unittest.TestCase):
         minLen = 5
         expected = False
         self.assertEqual(validate_user(name, minLen), expected)
+    
+    def test_zero_or_negative_number(self):
+        self.assertRaises(ValueError, validate_user, 'joel',0)
 
 if __name__ == "__main__":
     unittest.main()
