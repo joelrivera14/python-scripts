@@ -8,7 +8,7 @@ class Tests(unittest.TestCase):
     def test_normal_run(self, mock_print, mock_input):
         main.main()
         mock_print.assert_called_with(f'the average is 2.00')
-    []
+    
     @patch('builtins.input', side_effect=['r','6','1','2','3','4','5','6'])
     @patch('builtins.print')
     def test_first_value_error(self, mock_print, mock_input):
