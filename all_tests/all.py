@@ -1,3 +1,4 @@
+import re
 def main():
     while True:
         try:
@@ -6,8 +7,16 @@ def main():
                 break
             print('must be greater than zero')
         except ValueError:
-            print('must be a number ')
+            print('must be a number')
     
     print(x)
+
+def rearrange(name):
+    result = re.search(r'^([\w.]*), ([\w.]*)$', name)
+    if result is None:
+        return name
+    return f'{result[2]}, {result[1]}'
+
+
 
         
