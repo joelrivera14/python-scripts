@@ -1,22 +1,15 @@
 import re
-def main():
+def printValue():
     while True:
         try:
-            x = int(input("Enter a number greater than zero"))
+            x = int(input('enter an number greater than 0'))
             if(x>0):
                 break
-            print('must be greater than zero')
+            print('number greater than 0')
         except ValueError:
-            print('must be a number')
-    
+            print('enter a number')
     print(x)
 
 def rearrange(name):
-    result = re.search(r'^([\w.]*), ([\w.]*)$', name)
-    if result is None:
-        return name
+    result = re.search(r'^([\w.]*), ([\w.]*)$',name)
     return f'{result[2]}, {result[1]}'
-
-
-
-        
